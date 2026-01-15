@@ -34,7 +34,7 @@
           <!-- Right Image -->
           <div class="flex items-center justify-center">
             <img
-              src="/api/placeholder/400/400"
+              src="https://lezada-demo.myshopify.com/cdn/shop/files/banner-carousel-1_900x.jpg?v=1613746686"
               alt="Bottle Grinder"
               class="max-w-full h-auto"
             />
@@ -78,7 +78,7 @@
           <!-- Right Image -->
           <div class="flex items-center justify-center">
             <img
-              src="/api/placeholder/400/400"
+              src="https://lezada-demo.myshopify.com/cdn/shop/files/banner-carousel-2_900x.jpg?v=1613746686"
               alt="Living Room Set"
               class="max-w-full h-auto"
             />
@@ -122,7 +122,7 @@
           <!-- Right Image -->
           <div class="flex items-center justify-center">
             <img
-              src="/api/placeholder/400/400"
+              src="https://lezada-demo.myshopify.com/cdn/shop/files/banner-carousel-3_900x.jpg?v=1613746686"
               alt="Cookware"
               class="max-w-full h-auto"
             />

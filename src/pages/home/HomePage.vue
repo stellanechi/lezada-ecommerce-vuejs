@@ -1,11 +1,7 @@
 <template>
-  <div>
-    <div>
-      <NavigationBar />
-    </div>
-    <div>
-      <HeroSlider />
-    </div>
+  <div class="min-h-screen">
+    <NavigationBar />
+    <HeroSlider />
   </div>
 </template>
 
@@ -14,4 +10,4 @@ import NavigationBar from "@/components/navbar/NavigationBar.vue";
 import HeroSlider from "@/pages/home/HeroSlider.vue";
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped lang="scss"></style>
