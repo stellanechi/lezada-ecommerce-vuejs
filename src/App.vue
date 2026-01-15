@@ -1,12 +1,10 @@
-<script setup></script>
+<script setup>
+import Footer from "./components/footer/Footer.vue";
+</script>
 
 <template>
-  <h1 class="bg-red-400">You did it!</h1>
-  <p>
-    Visit
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to
-    read the documentation
-  </p>
+  <div>
+    <RouterView />
+    <Footer />
+  </div>
 </template>
-
-<style scoped></style>
