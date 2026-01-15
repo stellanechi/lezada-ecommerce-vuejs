@@ -8,6 +8,12 @@ const router = createRouter({
       name: "home",
       component: () => import("@/pages/home/HomePage.vue"),
     },
+    // FOOTER SECTION ROUTES
+    {
+      path: "/search",
+      name: "search",
+      component: () => import("@/components/footer/footerpages/Search.vue"),
+    },
     {
       path: "/auth",
       name: "auth",
