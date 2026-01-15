@@ -16,7 +16,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import ProductCard from "@/components/product/ProductCard.vue";
+import ProductCard from "@/pages/home/product/ProductCard.vue";
 
 // emits
 const emit = defineEmits(["event-selected"]);

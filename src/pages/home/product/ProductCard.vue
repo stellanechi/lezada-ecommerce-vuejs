@@ -1,37 +1,41 @@
 <template>
   <div class="product-card">
-    <!-- Badges -->
-    <div class="badges">
-      <span v-if="product.onSale" class="badge">SALE</span>
-      <span v-if="hasDiscount" class="badge">-{{ discountPercent }}%</span>
-      <span v-if="product.badge" class="badge">{{ product.badge }}</span>
-    </div>
-
-    <!-- Image Container -->
-    <div class="image-container">
-      <div v-if="!imageLoaded" class="loading-spinner">
-        <div class="spinner"></div>
+    <div>
+      <!-- Badges -->
+      <div class="badges">
+        <span v-if="product.onSale" class="badge">SALE</span>
+        <span v-if="hasDiscount" class="badge">-{{ discountPercent }}%</span>
+        <span v-if="product.badge" class="badge">{{ product.badge }}</span>
       </div>
-      <img
-        :src="product.image || placeholderImage"
-        :alt="product.title"
-        :class="{ loaded: imageLoaded }"
-        @load="imageLoaded = true"
-        @error="handleImageError"
-      />
-    </div>
 
-    <!-- Product Info -->
-    <div v-if="product.title || product.price" class="product-info">
-      <h3 class="product-title">{{ product.title }}</h3>
-      <div v-if="product.price" class="price-container">
-        <span class="current-price">${{ product.price }}</span>
-        <span
-          v-if="product.originalPrice && product.originalPrice > product.price"
-          class="original-price"
-        >
-          ${{ product.originalPrice }}
-        </span>
+      <!-- Image Container -->
+      <div class="image-container">
+        <div v-if="!imageLoaded" class="loading-spinner">
+          <div class="spinner"></div>
+        </div>
+        <img
+          :src="product.image || placeholderImage"
+          :alt="product.title"
+          :class="{ loaded: imageLoaded }"
+          @load="imageLoaded = true"
+          @error="handleImageError"
+        />
+      </div>
+
+      <!-- Product Info -->
+      <div v-if="product.title || product.price" class="product-info">
+        <h3 class="product-title">{{ product.title }}</h3>
+        <div v-if="product.price" class="price-container">
+          <span class="current-price">${{ product.price }}</span>
+          <span
+            v-if="
+              product.originalPrice && product.originalPrice > product.price
+            "
+            class="original-price"
+          >
+            ${{ product.originalPrice }}
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -92,12 +96,14 @@ const handleImageError = (event) => {
 <style scoped>
 .product-card {
   position: relative;
-  background-color: #f9fafb;
+  /* background-color: #f9fafb; */
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  padding: 2rem;
+  background-color: #f2f2f2;
 }
 
 .product-card:hover {
@@ -124,10 +130,10 @@ const handleImageError = (event) => {
 }
 
 .image-container {
-  position: relative;
+  /* position: relative;
   aspect-ratio: 1;
-  background-color: #f3f4f6;
   overflow: hidden;
+  background-color: red; */
 }
 
 .loading-spinner {
@@ -154,8 +160,8 @@ const handleImageError = (event) => {
 }
 
 .image-container img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   object-fit: cover;
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
